@@ -27,7 +27,7 @@ def countdown(time_in_secs):
   
   while time_in_secs:
     mins, secs = divmod(time_in_secs, 60)
-    timer = '{:s}:{:s}{:s}'.format(decimal_to_roman(mins), decimal_to_roman(secs), "     ")
+    timer = '\t{:s}:{:s}{:s}'.format(decimal_to_roman(mins), decimal_to_roman(secs), "     ")
     print(timer, end="\r")
     time.sleep(1)
     time_in_secs -= 1
@@ -44,4 +44,4 @@ def decimal_to_roman(num):
 
   return value
 
-countdown(65)
+countdown(1800)
